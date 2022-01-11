@@ -25,15 +25,6 @@ import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 @ComponentScan("net.proselyte.springboot")
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
-//    @Qualifier("userServiceImpl")
-//    @Autowired
-//    private UserService userService;
-//
-//    @Override
-//    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-//        auth.userDetailsService(userService).passwordEncoder(new BCryptPasswordEncoder());
-//    }
-
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.formLogin()
@@ -69,10 +60,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 // защищенные URL
                 .antMatchers("/index").hasAnyAuthority("ADMIN").anyRequest().authenticated();
     }
-//    @Bean
-//    PasswordEncoder getEncoder() {
-//        return new BCryptPasswordEncoder();
-//    }
+
     @Bean
     public PasswordEncoder passwordEncoder() {
         return NoOpPasswordEncoder.getInstance();
