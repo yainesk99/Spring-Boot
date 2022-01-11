@@ -17,17 +17,3 @@ public class SpringbootApplication {
 
 
 }
-//@SpringBootApplication
-//@ComponentScan("net.proselyte.springboot.controller")
-//public class SpringbootApplication{
-//
-//    public static void main(String[] args) throws IOException {
-//        SpringApplication.run(SpringbootApplication.class, args);
-//        openHomePage();
-//    }
-//
-//    private static void openHomePage() throws IOException {
-//        Runtime rt = Runtime.getRuntime();
-//        rt.exec("rundll32 url.dll,FileProtocolHandler " + "http://localhost:8080");
-//    }
-//}
